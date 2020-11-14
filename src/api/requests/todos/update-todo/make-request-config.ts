@@ -1,12 +1,11 @@
-import { countriesEndpoint } from '@/api/endpoints/suppliers';
+import { todosEndpoint } from '@/api/endpoints/todos';
+import { TodoType } from '@/pages/home/_types';
 import { requestTranslateFunction } from '@/_constants/i18next/i18next-constants';
 import { responseSchema } from './response-schema';
 
-export const makeRequestConfig = () => ({
-  endpoint: countriesEndpoint,
+export const makeRequestConfig = (todo: TodoType) => ({
+  endpoint: todosEndpoint,
   translateFunction: requestTranslateFunction,
   responseSchema,
-  headers: {
-    'X-User-Id': '2',
-  },
+  body: { todo },
 });
