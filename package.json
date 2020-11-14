@@ -4,6 +4,8 @@
   "dependencies": {
     "@mihanizm56/fetch-api": "3.4.0",
     "@mihanizm56/react-final-form-utils": "0.0.4",
+    "@ravilm/databus": "1.0.1",
+    "@ravilm/databus-react": "1.0.1",
     "@wildberries/confirm-modal-portal": "0.0.8",
     "@wildberries/i18next-utils": "0.0.10",
     "@wildberries/notifications": "1.0.9",
