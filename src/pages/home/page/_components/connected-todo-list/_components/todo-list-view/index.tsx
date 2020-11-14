@@ -10,7 +10,7 @@ const cn = classnames.bind(styles);
 const BLOCK_NAME = 'Todo-list-view';
 
 type PropsType = {
-  itemsList: Array<TodoType>;
+  todosList: Array<TodoType>;
   deleteTodo: (id: string) => void;
   updateTodo: ({
     input,
@@ -25,12 +25,12 @@ type PropsType = {
   submitForm: (values: AddTodoFormValues) => void;
   error?: any;
   listLoading: boolean;
-  modalLoading: boolean;
+  formLoading: boolean;
 };
 
 export const TodoListView = memo(
   ({
-    itemsList,
+    todosList,
     deleteTodo,
     updateTodo,
     addModalOpened,
@@ -39,7 +39,7 @@ export const TodoListView = memo(
     submitForm,
     error,
     listLoading,
-    modalLoading,
+    formLoading,
   }: PropsType) => {
     if (Boolean(error)) {
       return (
@@ -70,7 +70,7 @@ export const TodoListView = memo(
           <div className={cn(`${BLOCK_NAME}__list`)}>
             <TodoList
               deleteTodo={deleteTodo}
-              itemsList={itemsList}
+              todosList={todosList}
               updateTodo={updateTodo}
             />
           </div>
@@ -84,7 +84,7 @@ export const TodoListView = memo(
         >
           <AddTodoForm
             closeModal={closeModal}
-            isLoading={modalLoading}
+            isLoading={formLoading}
             submitForm={submitForm}
           />
         </Modal>

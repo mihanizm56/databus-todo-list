@@ -8,7 +8,7 @@ const cn = classnames.bind(styles);
 const BLOCK_NAME = 'Todo-list';
 
 type PropsType = {
-  itemsList: Array<TodoType>;
+  todosList: Array<TodoType>;
   deleteTodo: (id: string) => void;
   updateTodo: ({
     input,
@@ -20,9 +20,9 @@ type PropsType = {
 };
 
 export const TodoList = memo(
-  ({ itemsList, deleteTodo, updateTodo }: PropsType) => (
+  ({ todosList, deleteTodo, updateTodo }: PropsType) => (
     <ul className={cn(BLOCK_NAME)}>
-      {itemsList.map(({ id, text }) => (
+      {todosList.map(({ id, text }) => (
         <li key={id} className={cn(`${BLOCK_NAME}__item`)}>
           <TodoItem
             deleteTodo={deleteTodo}
