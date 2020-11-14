@@ -1,0 +1,18 @@
+@import "@/styles/media.module";
+@import "@wildberries/ui-kit/lib/styles/constants.module.scss";
+
+.Toggle-input {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 44px;
+
+  &__input-container {
+    width: 200px;
+
+    &--hidden {
+      display: none;
+    }
+  }
+}
+

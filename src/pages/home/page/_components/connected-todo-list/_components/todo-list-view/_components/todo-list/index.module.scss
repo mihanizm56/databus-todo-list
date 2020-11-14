@@ -1,0 +1,21 @@
+@import "@wildberries/ui-kit/lib/styles/constants.module.scss";
+
+.Todo-list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  max-height: 800px;
+  overflow-y: scroll;
+  padding: 20px 0;
+  width: 500px;
+
+  &__item {
+    padding-top: 20px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
+

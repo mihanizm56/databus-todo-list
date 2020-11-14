@@ -1,0 +1,25 @@
+@import "@wildberries/ui-kit/lib/styles/constants.module.scss";
+
+.Todo-item {
+  background-color: $White;
+  border-radius: 10px;
+  box-shadow: 0 0 0 2px rgba(25, 27, 34, .3);
+  box-sizing: border-box;
+  padding: 10px 20px;
+
+  width: 300px;
+
+
+  &__title {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__input-container {
+    padding-top: 10px;
+  }
+  &__buttons-container {
+    padding-top: 10px;
+  }
+}
+

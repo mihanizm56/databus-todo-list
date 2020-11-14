@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // router
-app.use('/api/v1', rootRouter);
+app.use('/', rootRouter);
 
 app.use((req, res, next) => {
   next(createError(404));

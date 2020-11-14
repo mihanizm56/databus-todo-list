@@ -1,45 +1,10 @@
-@import "@wildberries/ui-kit/lib/styles/constants.module.scss";
-@import "@wildberries/ui-kit/lib/styles/media.module.scss";
+@import "@/styles/media.module";
 
-$sidebar-width: 324px;
-
-.Home-page {
-  background-color: #e5e5e5;
-  box-sizing: border-box;
+.homePage {
   display: flex;
-  height: 100vh;
-
-  &__sidebar {
-    background-color: $DarkPurple;
-    width: $sidebar-width;
-  }
-
-  &__card-wrapper {
-    box-sizing: border-box;
-    padding: 25px 60px 0 60px;
-    width: calc(100vw - #{$sidebar-width});
-  }
+  height: 100%;
+  justify-content: center;
+  padding-top: 40px;
+  position: relative;
 }
 
-@media #{$tablet} {
-  .Home-page {
-    &__card-wrapper {
-      display: flex;
-      justify-content: center;
-      padding: 25px 30px 0 30px;
-      width: 100%;
-    }
-
-    &__sidebar {
-      display: none;
-    }
-  }
-}
-
-@media #{$mobile} {
-  .Home-page {
-    &__card-wrapper {
-      padding: 16px 14px 0 14px;
-    }
-  }
-}
