@@ -40,7 +40,6 @@ export const AddTodoForm = ({
             isLoading={isLoading}
             text="Добавить"
             type="submit"
-            withLoader
           />
           <ButtonLink
             disabled={isLoading}

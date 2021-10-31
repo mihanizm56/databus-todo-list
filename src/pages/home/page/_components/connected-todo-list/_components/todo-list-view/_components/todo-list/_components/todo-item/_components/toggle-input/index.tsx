@@ -7,7 +7,6 @@ import {
   SimpleInputChangeEventType,
   Text,
 } from '@wildberries/ui-kit';
-import { uniqueId } from 'lodash-es';
 import styles from './index.module.scss';
 
 const cn = classnames.bind(styles);
@@ -37,7 +36,7 @@ export const ToggleInput = memo(
         })}
       >
         <SimpleInput
-          id={uniqueId('toggle-input__')}
+          id="toggle-input__"
           inputRef={inputRef}
           name="todo-value"
           onChange={onChange}
